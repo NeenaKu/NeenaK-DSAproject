@@ -216,9 +216,9 @@ def predict():
     print(diabetes)						
     print(diabetes[0])
     if diabetes[0]==1:
-        diabetes='There is a likelihood of patient getting Readmitted'
+        diabetes='There is a likelihood of the patient getting Readmitted'
     elif diabetes[0]==0:
-        diabetes='Patient is not likely to get Readmitted'
+        diabetes='The Patient is NOT likely to get Readmitted'
     print(diabetes)				
 
     return render_template('prediction.html',predicted=diabetes)						

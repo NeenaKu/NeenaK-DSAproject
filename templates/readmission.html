@@ -5,16 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Diabetic Patient Readmission Predictive Model</title>
         <link rel="stylesheet" href="../static/style.css">
+        
 </head>
 <body>
-
-<h1>Readmission Prediction</h1>
-<h2> Is the diabetic patient going to be readmitted or not? </h2>
-<p> Please enter the patient details: </p>
+  <div class = 'background' </div> 
 <center>
+<h1>Diabetic Patient Readmission Predictive Model</h1>
+<h3>Machine Learning based model to predict readmission risks of diabetic patients</h3><br>
+<h2> Is there a likelihood of Patient Hospital Readmission ? </h2>
+<h4> Please enter the patient details: </h4>
+</center>
 <form action="/prediction" method="post">
     <label for="Race">Select the Race:</label>
     <select id="Race" name="race">
+      <option value="Select">Select</option>
       <option value="Caucasian">Caucasian</option>
       <option value="AfricanAmerican">AfricanAmerican</option>
       <option value="Other">Other</option>
@@ -23,6 +27,7 @@
     </select><br><br>
     <label for="Age">Age Category:</label>
     <select id="Age" name="age">
+      <option value="Select">Select</option>
       <option value="[0-20)">0-20</option>
       <option value="[20-40)">20-40</option>
       <option value="[40-60)">40-60</option>
@@ -31,12 +36,14 @@
     </select><br><br>
     <label for="Admission Type ID">Enter the Admission Type:</label>
     <select id="Admission Type" name="admission type">
+      <option value="Select">Select</option>
       <option value="Emergency">Emergency</option>
       <option value="Elective">Elective</option>
       <option value="Not Available">Not Available</option>
     </select><br><br>
   <label for="Discharge Disposition ID">Enter the Discharge Disposition:</label>
   <select id="Discharge Disposition" name="discharge">
+    <option value="Select">Select</option>
     <option value="Discharged to home">Discharged to home</option>
     <option value="Transferred to another medical facility">Transferred to another medical facility</option>
     <option value="Discharged to home with home health service">Discharged to home with home health service </option>
@@ -45,6 +52,7 @@
   </select><br><br>
   <label for="Admission Source ID">Enter the Admission Source:</label>
   <select id="Admission Source" name="admission source">
+    <option value="Select">Select</option>
     <option value="Emergency">Emergency</option>
     <option value="Referral">Referral</option>
     <option value="Transferred from another health care facility">Transferred from another health care facility </option>
@@ -59,21 +67,23 @@
   <label for="Number of medications">Enter the Number of Medications prescribed:</label>
   <input type="number" id="number of medications" name="num_of_medications"><br><br>
   <label for="Primary diagnoses">Select the Primary diagnoses:</label>
-  <select id="Diagnoses 1" name="diag_1">
+  <select id="Primary Diagnoses" name="diag_1">
+    <option value="Select">Select</option>
     <option value="Circulatory">Circulatory</option>
     <option value="Other">Other </option>
-    <option value="Respiratory">Respiratory </option>
-    <option value="Digestive">Digestive </option>
+    <option value="Respiratory">Respiratory</option>
+    <option value="Digestive">Digestive</option>
     <option value="Diabetes">Diabetes</option>
-    <option value="Injury ">Injury </option>
+    <option value="Injury">Injury</option>
     <option value="Musculoskeletal">Musculoskeletal</option>
-    <option value="Genitourinary ">Genitourinary  </option>
-    <option value="Neoplasms ">Neoplasms  </option>
+    <option value="Genitourinary">Genitourinary</option>
+    <option value="Neoplasms">Neoplasms</option>
   </select><br><br>
   <label for="Number of Diagnoses">Enter the Number of Diagnoses:</label>
   <input type="number" id="Number of Diagnoses" name="number_diagnoses"><br><br>
   <label for="Max Glu Serum">Enter the Glucose Serum Value:</label>
     <select id="Max Glu Serum" name="max_glu_serum">
+      <option value="Select">Select</option>
       <option value="0">Not Available</option>
       <option value="Norm">Norm</option>
       <option value=">200">Greater than 200</option>
@@ -81,6 +91,7 @@
     </select><br><br>
     <label for="A1Cresult">Enter the A1C Result Value:</label>
     <select id="A1Cresult" name="A1Cresult">
+      <option value="Select">Select</option>
       <option value="0">Not Available</option>
       <option value="Norm">Norm</option>
       <option value=">8">Greater than 8</option>
@@ -88,6 +99,7 @@
     </select><br><br>
     <label for="metformin">Enter the dosage of Metformin:</label>
     <select id="metformin" name="metformin">
+      <option value="Select">Select</option>
       <option value="No">No</option>
       <option value="Steady">Steady</option>
       <option value="Up">Up</option>
@@ -95,6 +107,7 @@
     </select><br><br>
     <label for="repaglinide">Enter the dosage of Repaglinide:</label>
     <select id="repaglinide" name="repaglinide">
+      <option value="Select">Select</option>
       <option value="No">No</option>
       <option value="Steady">Steady</option>
       <option value="Up">Up</option>
@@ -102,6 +115,7 @@
     </select><br><br>
     <label for="glimepiride">Enter the dosage of Glimepiride:</label>
     <select id="glimepiride" name="glimepiride">
+      <option value="Select">Select</option>
       <option value="No">No</option>
       <option value="Steady">Steady</option>
       <option value="Up">Up</option>
@@ -110,6 +124,7 @@
   
     <label for="glipizide">Enter the dosage of Glipizide:</label>
     <select id="glipizide" name="glipizide">
+      <option value="Select">Select</option>
       <option value="No">No</option>
       <option value="Steady">Steady</option>
       <option value="Up">Up</option>
@@ -118,6 +133,7 @@
   
     <label for="pioglitazone">Enter the dosage of Pioglitazone:</label>
     <select id="pioglitazone" name="pioglitazone">
+      <option value="Select">Select</option>
       <option value="No">No</option>
       <option value="Steady">Steady</option>
       <option value="Up">Up</option>
@@ -126,6 +142,7 @@
   
     <label for="rosiglitazone">Enter the dosage of Rosiglitazone:</label>
     <select id="rosiglitazone" name="rosiglitazone">
+      <option value="Select">Select</option>
       <option value="No">No</option>
       <option value="Steady">Steady</option>
       <option value="Up">Up</option>
@@ -134,6 +151,7 @@
   
     <label for="acarbose">Enter the dosage of Acarbose:</label>
     <select id="acarbose" name="acarbose">
+      <option value="Select">Select</option>
       <option value="No">No</option>
       <option value="Steady">Steady</option>
       <option value="Up">Up</option>
@@ -142,6 +160,7 @@
   
     <label for="insulin">Enter the dosage of Insulin:</label>
     <select id="insulin" name="insulin">
+      <option value="Select">Select</option>
       <option value="No">No</option>
       <option value="Steady">Steady</option>
       <option value="Up">Up</option>
@@ -150,22 +169,25 @@
   
     <label for="change">Change in medication:</label>
     <select id="change" name="change">
+      <option value="Select">Select</option>
       <option value="No">No</option>
       <option value="Ch">Ch</option>
     </select><br><br>
   
     <label for="diabetesMed">Diabetes Medication:</label>
     <select id="diabetesMed" name="diabetesMed">
+      <option value="Select">Select</option>
       <option value="No">No</option>
       <option value="Yes">Yes</option>
     </select><br><br>
   
   <label for="Preceding year visits">Enter the number of Preceding Year Visits:</label>
   <input type="number" id="preceding year visits" name="preceding_year_visits" step="0.01"> <br><br>
-  
-  <input type="submit" value="Submit">
+  <center>
+    <button type="submit"><b>Predict</b></button>
+  </center>
 </form>
-</center>
+
 
 </body>
 </html>
